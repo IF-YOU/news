@@ -1,0 +1,16 @@
+<div id="pindao">
+    <a href ="#/shuxin" class="guanbi iconfont">&#xe609;</a>
+    <div class="xinxi">
+        <div class="wode">我的频道</div>
+        <div class="bianji">编辑</div>
+    </div>
+    <ul class="ding">
+       <li ng-repeat="v in shuju"  ng-click="shanchu(v)" ng-if="v.state">{{v.name}}</li>
+    </ul>
+    <div class="xinxi da">
+        <div class="wode">频道推荐</div>
+    </div>
+    <ul class="ding">
+       <li ng-repeat="v in shuju"  ng-click="shanchu(v)" ng-if="!v.state">{{v.name}}</li>
+    </ul>
+</div>

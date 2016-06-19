@@ -1,0 +1,37 @@
+<div id="guanxin" ng-hide="title!='关心'">
+	<div class="zhengzaiguanxin">
+         <div class="top">
+           <div class="hongshu"></div>
+           <div class="wenzi">正在关心</div>
+         </div>
+         <div class="bottoms" ng-if="xiaoshi">
+           <div class="touxiangs">+</div>
+           <div class="neirongs">尚无关心,从下面挑几个关心吧！</div>
+         </div>
+	</div>
+  <div class="kenengguanxin">
+        <div class="bottom" ng-repeat="v in guanxin" ng-if="v.state">
+          <img class="touxiang" src={{v.touxiang}} alt="">
+           <div class="wenzi">
+                <div class="biaoti">{{v.biaoti}}</div>
+                <div class="neirong">{{v.neirong}}</div>
+           </div>
+           <a ng-click="shanchu(v)" href=""><div class="guanxin">{{v.guanzhu}}</div></a>
+        </div>
+  </div>
+	<div class="huitiao"></div>
+	<div class="kenengguanxin">
+	    <div class="top">
+          <div class="hongshu"></div>
+           <div class="wenzi">可能关心</div>
+        </div>
+        <div class="bottom" ng-repeat="v in guanxin" ng-if="!v.state">
+        	<img class="touxiang" src={{v.touxiang}} alt="">
+           <div class="wenzi">
+                <div class="biaoti">{{v.biaoti}}</div>
+                <div class="neirong">{{v.neirong}}</div>
+           </div>
+           <a ng-click="shanchu(v)" href=""><div class="guanxin">{{v.guanxin}}</div></a>
+        </div>
+	</div>
+</div>

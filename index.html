@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="jrtt">
+<head>
+	<meta charset="UTF-8">
+	<title>今日头条</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<link href="http://cdn.bootcss.com/Swiper/3.3.1/css/swiper.css" rel="stylesheet">
+	<script src="http://cdn.bootcss.com/jquery/2.2.2/jquery.js"></script>
+	<script src="http://cdn.bootcss.com/Swiper/3.3.1/js/swiper.jquery.js"></script>
+	<!-- <link href="http://cdn.bootcss.com/materialize/0.97.6/css/materialize.css" rel="stylesheet"> -->
+	<link rel="stylesheet" href="./css/index.css">
+	<script src="./js/angular.js"></script>
+	<script src="./js/angular-route.js"></script>
+	<script src="./js/angular-touch.js"></script>
+	<script src="./js/angular-animate.js"></script>
+	<script src="./js/index.js"></script>
+</head>
+<body ng-controller="indexCtrl">
+    <jr-yindao ng-if="isFirstOpen"></jr-yindao>
+	<jr-top></jr-top>		
+	<ng-view id="ngview"></ng-view>	
+	<jr-bottom></jr-bottom>
+</body>
+</html>
